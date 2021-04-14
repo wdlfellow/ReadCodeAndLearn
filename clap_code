@@ -1,0 +1,18 @@
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ArgMatches {
+    pub(crate) args: IndexMap<Id, MatchedArg>,
+    pub(crate) subcommand: Option<Box<SubCommand>>,
+}
+
+impl Default for ArgMatches {
+    fn default() -> Self {
+        ArgMatches {
+            args: IndexMap::new(),
+            subcommand: None,
+        }
+    }
+}
+
+知识点1：#[derive(Debug,Clone,PartialEq, Eq)]
+知识点2：imple Default 默认
